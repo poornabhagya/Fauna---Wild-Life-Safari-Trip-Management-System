@@ -1,0 +1,122 @@
+#coverphoto{
+	width:100%;
+}
+
+h1{
+	text-align:center;
+	font-family: Helvetica, Sans-serif;
+	font-size: 32px;
+	color:#676767;
+	letter-spacing: 2px;
+}
+
+h2{
+	margin-top:30px;
+	margin-left:50px;
+	font-family: Helvetica, Sans-serif;
+	font-size: 26px;
+}
+
+div.pack {
+	float: left;
+	margin-top: 10px ;
+	padding:10px;
+	margin-bottom:100px;
+	border: 1px solid #ccc;
+	width: 420px;
+	height: 550px;
+	background-color:#FFFAF0;
+}
+
+div.pack:hover {
+  border: 1px solid #777;
+}
+
+div.pack img {
+  width: 100%;
+  height: 260px;
+}
+
+div.text {
+  padding: 15px;
+  text-align:center;
+  width:390px;
+  height:38px;
+  background-color: #cdc99e;
+}
+
+div.allpacks{
+	margin-left:100px;
+}
+
+
+.tourname{
+	font-size:28px;
+	margin-top:0px;
+}
+
+p.des{
+	font-size:18px;
+	margin-top:0px;
+}
+
+.p{
+	font-size:30px;
+	font-family: Helvetica, Sans-serif;
+	color:#a09077;
+	margin-top:0px;
+	font-weight:bold;
+}
+
+.price{
+	font-size:30px;
+	font-family: Helvetica, Sans-serif;
+	color:#a09077;
+	margin-top:0px;
+	font-weight:bold;
+}
+
+.bookBtn{
+	  width: 200px;
+	  background-color: #ADFF2F;
+	  color: white;
+	  padding: 14px 20px;
+	  margin-top:0px;
+	  border: none;
+	  border-radius: 8px;
+	  cursor: pointer;
+}
+
+.bookBtn:hover{
+	background-color: #45a049;
+}
+
+.bookBtn a{
+	text-decoration:none;
+	color:black;
+	font-family: Helvetica, Sans-serif;
+	font-size:22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

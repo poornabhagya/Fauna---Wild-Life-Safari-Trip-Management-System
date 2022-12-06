@@ -1,0 +1,16 @@
+#inquiry{
+	width:660px;
+	text-align:left;
+	margin:20px 0 30px 50px;
+	padding:20px 20px 20px 60px;
+	
+	background-image: linear-gradient(white,#FFF5EE,#a09077);
+}
+body{
+	background-image: linear-gradient(#FFF5EE,white);
+}
+
+h2{
+	color:#006400;
+	font-size:22px;
+}

@@ -1,0 +1,134 @@
+ <!DOCTYPE html>
+<html>
+	<head>
+		<!--(a)-->
+		<title>Registration</title>	
+		<link rel="stylesheet" href="../css/home.css">
+		<link rel="stylesheet" href="../css/register.css">
+		
+		<script src = "../js/myScripts.js"></script> 
+	</head>
+	
+	<body bgcolor=" #a49884 ">
+		<div class="menu">
+		<img id="logo" src="../images/logo8.png">
+			<ul>
+					
+					<li><a href="home.php">Home</a></li>
+					<li><a href="tour.php">Wildlife Tours</a></li>
+					<li><a href="accommodation.php">Accommodation</a></li>
+					<li><a href="package.php">Packages</a></li>
+					 
+					<li><a href="testimonial.php">Testimonials</a></li>
+					<li><a href="aboutus.php">About Us</a></li>
+					<li><a href="contactus.php">Contact Us</a></li>			
+					<li>
+					<?php
+						session_start();
+						
+						//check if the session variable is available
+						if(isset($_SESSION["userName"]))
+						{							
+							echo "<a href='userProfile.php' id='signup-btn'>User</a>";																					
+						}
+						else
+						{
+							echo "<a href='login.php' id='signup-btn'>LOGIN</a>";
+						}
+						
+					?>
+					</li>	
+			</ul>
+		</div>
+		
+		<div id="background">
+		<center><h1>Register New User</h1></center>
+		
+		<?php
+			//link configuration file
+			require 'config.php';
+		?>
+		
+		<form method="POST" onsubmit="return checkPassword()" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+			<label>First Name</label>
+			<input type="text" name="firstname" placeholder="First Name" required><br><br>
+			
+			<label>Last Name</label>
+			<input type="text" name="lastname" placeholder="Last Nme" required><br><br>
+			
+			<label>User Name</label>
+			<input type="text" name="username" placeholder="User Name"  required><br><br>
+			
+			<label>Phone Number</label>
+			<input type="text" name='mobile' placeholder="Phone Number"  pattern="[0-9]{10}" required><br><br>
+			
+			<label>E-mail</label>
+			<input type="text" name='email' placeholder="E-mail"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br><br>
+			
+			<label>Password</label>
+			<input type="password" id="psw" name="psw" placeholder="Password"  required> <br><br>
+			
+			<label>Re-Enter Password</label>
+			<input type="password" id="confirmpsw" name="confirm_psw" placeholder="Re-enter Password"  required"> <br><br>
+			
+			<center><input type="submit" value="Submit" name="btn"></center>
+ 
+		</form>
+		</div>	
+		
+		
+		<?php
+			if(isset($_POST["btn"]))
+			{
+				$fname = $_POST["firstname"];
+				$lname = $_POST["lastname"];
+				$uname = $_POST["username"];
+				$pno = $_POST["mobile"];
+				$email = $_POST["email"];
+				$pword = $_POST["psw"];
+
+				//Insert data to database
+				$sql = "INSERT INTO User(FirstName,LastName,UserName,PhoneNumber,Email,Password)VALUES('$fname','$lname','$uname','$pno','$email','$pword')";
+				
+				//check if the SQL statement successfully executed in the DB server 
+				if($con->query($sql))
+				{
+					echo "<center><h4 style='color:green; font-size:20px;letter-spacing: 1px;'>Successfully registered!!<h4></center>";
+				}
+				
+				else{
+					echo "Error: ".$con->error;
+				}
+								
+			}
+			$con->close();
+			
+		?>
+		
+		
+		
+	
+		
+	    <footer>
+			<img id="logo" src="../images/logo8.png">
+			<h3> <img src="../images/mail.jpg"> faunasafarisrilanka@gmail.com</h3>
+			<h3> <img src="../images/phone.png"> +94 (0)773 479 723</h3>
+			<h3> <img src="../images/address.png"> 873/2, Debarawewa, Tissamaharama, Sri Lanka.</h3>
+			<hr>
+			<p align="center">©Copyright 2022. FAUNA Safari. All Rights Reserved </p>
+			
+		</footer> 
+		
+	</body>	
+
+	
+		
+		
+</body>
+</html>	
+		
+
+		
+		
+		
+ 

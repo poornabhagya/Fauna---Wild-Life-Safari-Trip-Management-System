@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title> About Us </title>
+	<link rel="stylesheet" href="../css/home.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<meta charset = "UTF = 8">
+
+</head>
+
+
+<body>
+
+	<div class="menu">
+		<img id="logo" src="../images/logo8.png">
+			<ul>
+					
+					<li><a href="home.php">Home</a></li>
+					<li><a href="tour.php">Wildlife Tours</a></li>
+					<li><a href="accommodation.php">Accommodation</a></li>
+					<li><a href="package.php">Packages</a></li>
+					 
+					<li><a href="testimonial.php">Testimonials</a></li>
+					<li><a href="aboutus.php">About Us</a></li>
+					<li><a href="contactus.php">Contact Us</a></li>			
+					<li>
+					<?php
+						session_start();
+						
+						//check if the session variable is available
+						if(isset($_SESSION["userName"]))
+						{							
+							echo "<a href='userProfile.php' id='signup-btn'>User</a>";																					
+						}
+						else
+						{
+							echo "<a href='login.php' id='signup-btn'>LOGIN</a>";
+						}
+						
+					?>
+					</li>							
+			</ul>
+	</div>
+
+	<img class = "coverPhoto" src = "../images/gg.png" align = center />
+	<h1> About Us </h1>
+	<hr>
+	
+	
+		
+		
+	<div class="grid-container">
+		<div class="grid-item">
+			<p class = "aboutUsP"> Mostly the safari Jeep tours in National parks are organized and well planned during the times where the animals can be spotted simultaneously. Specially the <b>morning </b> and <b>afternoon </b>safari jeep tours maximizes the observing opportunities of different types of animal species. Also our well educated trustworthy and well experienced safari jeep drivers takes care of everything including ticket purchasing to picnic meal.<br></p>
+			<p style="text-indent :4em;" class = "aboutUsP" > Safari jeeps are well examined including all the types of essential equipments such as first aid boxes, pop up wibdows etc. And also our well experienced and well knowledgeable drivers will helps you to make your safari incredible and memorial.<br>   </p>
+			<p style="text-indent :3em;" class = "aboutUsP" > All our Safari Jeeps are the best of the town. You can choose any type of safari jeep from belove. <b>Toyota Hilux or Toyata Land Cruisers</b> [with several options ]. As a <b>Sri Lanka Tourism Development Authority licensed operator</b>, we do the service in responsible way. </p>
+		</div>
+ 
+		<div class="grid-item">
+			<img  src = "../images/pic10.png" class="AboutUsPhotos"   />
+	</div>
+	</div>
+	
+	<h1 style="margin-top:100px;"> Why Traval With Us </h1>
+	
+	<img  src = "../images/pic5.png" class="center" style="margin-left:180px;" />
+	<img  src = "../images/pic4.png" class="center" />
+	<img  src = "../images/pic3.png" class="center" />
+	
+	<img  src = "../images/pic7.png" class="secoundLIne" style="margin-left:180px;"/>
+	<img  src = "../images/pic9.png" class="secoundLIne" />
+	<img  src = "../images/pic6.png" class="secoundLIne" />
+	
+	
+	 <footer>
+			<img id="logo" src="../images/logo8.png">
+			<h3> <img src="../images/mail.jpg"> faunasafarisrilanka@gmail.com</h3>
+			<h3> <img src="../images/phone.png"> +94 (0)773 479 723</h3>
+			<h3> <img src="../images/address.png"> 873/2, Debarawewa, Tissamaharama, Sri Lanka.</h3>
+			<hr>
+			<p align="center">©Copyright 2022. FAUNA Safari. All Rights Reserved </p>
+			
+	</footer> 
+
+</body>
+
+
+
+
+</html>

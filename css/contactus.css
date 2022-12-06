@@ -1,0 +1,59 @@
+/*Referenced by W3schools*/
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 50%;
+  align:left;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 12px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  padding-left:100px;
+  padding-top:40px;
+
+}
+.container1 {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top:-650px;
+  margin-right:100px;
+  float:right;
+  
+}
+h1{
+	font-family: Helvetica, Sans-serif;
+	text-align: center;
+	color:#676767;
+	font-size: 32px;
+	font-weight: 700
+	display : inline-block;
+	position: relative;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	
+}
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--(a)-->
+		<title>Home page</title>	
+		<link rel="stylesheet" href="../css/home.css">
+		 
+	</head>
+	
+	<body>
+		<div class="menu">
+		<img id="logo" src="../images/logo8.png">
+			<ul>
+					
+					<li><a href="#">Home</a></li>
+					<li><a href="tour.php">Wildlife Tours</a></li>
+					<li><a href="accommodation.php">Accommodation</a></li>
+					<li><a href="package.php">Packages</a></li>
+					 
+					<li><a href="testimonial.php">Testimonials</a></li>
+					<li><a href="aboutus.php">About Us</a></li>
+					<li><a href="contactus.php">Contact Us</a></li>			
+					<li>
+					<?php
+						session_start();
+						
+						//check if the session variable is available
+						if(isset($_SESSION["userName"]))
+						{							
+							echo "<a href='userProfile.php' id='signup-btn'>User</a>";																					
+						}
+						else
+						{
+							echo "<a href='login.php' id='signup-btn'>LOGIN</a>";
+						}
+						
+					?>
+					</li>													
+									
+			</ul>
+		</div>
+		
+		<img src="../images/homecover.jpg" class="coverimage"><br><br>
+		 
+		
+		<center><h2 id="head">Welcome to FAUNA wildlife safari tours</h2></center><br>
+		
+		<center>
+		<div class="para"><p>For over 10 years, FAUNA Safari Tours has been serving clients from all over the world.
+			We are dedicated to providing the highest level of comfort, enjoyment, and adventure as you explore Sri Lanka. Our staff includes driver-guides and tour designers with years of experience visiting Sri Lanka's wild habitats.
+			Their expertise and intuition are vital in ensuring that each safari we provide is exceptional. There are numerous exciting wildlife tours to select from, and the most of them are suited for families.
+			You'll see a lot of elephants, birds and leopards. You'll have plenty of opportunities to take lots of photos. You'll have a fantastic time here! 
+		</p></div>
+		</center><br><br><br>
+		
+		<div>
+		<div class="gallery">
+		  
+			<img src="../images/home1.jpg" >
+		  
+		  <div class="desc">Safari tourists. Two visitors here in a National Wildlife Park in Sri Lanka. Camping fire cozy closeup view. Outdoor wildlife lifestyle cooking delicious meal </div>
+		</div>
+
+		<div class="gallery">
+		  
+			<img src="../images/home2.jpg" >
+		  
+		  <div class="desc">Sri Lankan leopard, Panthera pardus kotiya, Big spotted cat going across the road, Yala national park, Sri Lanka, Asia. Highest leopard concentration in the world </div>
+		</div>
+
+		<div class="gallery">
+		  
+			<img src="../images/home5.jpg">
+		  
+		  <div class="desc">Camping with fire at night. Camping experience in Sri Lanka. Four visitors enjoying camping holiday in beachside </div>
+		</div>
+
+		<div class="gallery">
+		  
+			<img src="../images/home4.webp">
+		  
+		  <div class="desc">Car safari in Udawalawa national park. Asian elephants in Sri Lanka</div>
+		</div>
+		</div>
+		<br><br><br><br><br><br> <br><br><br><br><br><br>
+		
+		
+		
+		
+		
+	
+		
+	    <footer>
+			<img id="logo" src="../images/logo8.png">
+			<h3> <img src="../images/mail.jpg"> faunasafarisrilanka@gmail.com</h3>
+			<h3> <img src="../images/phone.png"> +94 (0)773 479 723</h3>
+			<h3> <img src="../images/address.png"> 873/2, Debarawewa, Tissamaharama, Sri Lanka.</h3>
+			<hr>
+			<p align="center">©Copyright 2022. FAUNA Safari. All Rights Reserved </p>
+			
+		</footer> 
+		
+	</body>	
+
+	
+		
+		
+</body>
+</html>
